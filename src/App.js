@@ -8,9 +8,10 @@ import AgeCategories from './components/AgeCategories';
 import Testimonials from './components/Testimonials';
 import ReviewsSlider from './components/ReviewsSlider';
 import TopCategories from './components/TopCategories';
-import ProductSlider from './components/Data/ProductSlider';
+import PuzzlesSlider from './components/Data/PuzzlesSlider';
 import ToysSlider from './components/Data/ToysSlider';
 import GamesSlider from './components/Data/GamesSlider';
+import PuzzleCardviews from './components/Data/PuzzleCardviews';
 
 function App() {
   return (
@@ -18,7 +19,8 @@ function App() {
       <Header />
       <Hero id="home" />
       <AgeCategories/>
-      <ProductSlider/>
+      <PuzzlesSlider/>
+      <PuzzleCardviews/>
       <TopCategories/>
       <ToysSlider/>
       <GamesSlider/>
