@@ -11,6 +11,7 @@ import TopCategories from './components/TopCategories';
 import PuzzlesSlider from './components/Data/PuzzlesSlider';
 import ToysSlider from './components/Data/ToysSlider';
 import GamesSlider from './components/Data/GamesSlider';
+import PuzzleCardviews from './components/Data/PuzzleCardviews';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <Hero id="home" />
       <AgeCategories/>
       <PuzzlesSlider/>
+      <PuzzleCardviews/>
       <TopCategories/>
       <ToysSlider/>
       <GamesSlider/>
