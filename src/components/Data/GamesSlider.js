@@ -1,58 +1,60 @@
 import React, { useRef, useEffect } from "react";
+import img1 from '../../images/products/TrainWooden.jpg';
+
 import './ProductSlider.css';
-const ProductSlider = () => {
+const GamesSlider = () => {
   const productData = [
     {
-      image: "https://via.placeholder.com/300x200?text=Wooden+Puzzles",
+      image: img1,
       title: "8 Pack Rack Wooden Puzzles for Toddlers",
       subtitle: "ABC, Numbers & Animals",
       price: "$44.99",
       rating: 4.8,
     },
     {
-      image: "https://via.placeholder.com/300x200?text=Map+Puzzles",
+      image: img1,
       title: "100 Pcs Search & Find Puzzles for Kids",
       subtitle: "Maps & Space",
       price: "$29.99",
       rating: 4.6,
     },
     {
-      image: "https://via.placeholder.com/300x200?text=Magnetic+Book",
+      image: img1,
       title: "Magnetic Book 3x36 Pcs",
       subtitle: "Princess, Unicorns & Me",
       price: "From $12.98",
       rating: 4.7,
     },
     {
-      image: "https://via.placeholder.com/300x200?text=Building+Blocks",
+      image: img1,
       title: "Colorful Building Blocks Set",
       subtitle: "Imaginative Play & Creativity",
       price: "$39.99",
       rating: 4.9,
     },
     {
-      image: "https://via.placeholder.com/300x200?text=Musical+Toy",
+      image: img1,
       title: "Interactive Musical Toy Piano",
       subtitle: "Lights & Sounds",
       price: "$24.99",
       rating: 4.5,
     },
     {
-      image: "https://via.placeholder.com/300x200?text=Craft+Kit",
+      image: img1,
       title: "DIY Craft Kit for Kids",
       subtitle: "Creative & Fun",
       price: "$19.99",
       rating: 4.8,
     },
     {
-      image: "https://via.placeholder.com/300x200?text=Learning+Cards",
+      image: img1,
       title: "Flash Learning Cards Pack",
       subtitle: "Colors, Shapes & Words",
       price: "$9.99",
       rating: 4.6,
     },
     {
-      image: "https://via.placeholder.com/300x200?text=Puzzle+Game",
+      image: img1,
       title: "Brain Teaser Puzzle Game",
       subtitle: "Fun & Educational",
       price: "$15.99",
@@ -76,7 +78,7 @@ const ProductSlider = () => {
           sliderRef.current.scrollLeft += 300;
         }
       }
-    }, 3000); // Slide every 3 seconds
+    }, 4000); // Slide every 3 seconds
 
     // Cleanup interval on component unmount
     return () => clearInterval(scrollInterval);
@@ -87,7 +89,7 @@ const ProductSlider = () => {
       <div className="container mx-auto px-6">
         <div className="flex justify-between items-center mb-6">
           <h2 className="text-3xl font-extrabold text-gray-800">
-            Our Best Selling Learning Toys!
+            Games for All Ages
           </h2>
           <a href="#" className="text-blue-600 hover:underline text-lg">
             View All →
@@ -133,4 +135,4 @@ const ProductSlider = () => {
   );
 };
 
-export default ProductSlider;
+export default GamesSlider;

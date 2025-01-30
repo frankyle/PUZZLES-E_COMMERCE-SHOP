@@ -1,25 +1,26 @@
 import React from 'react';
+import img1 from '../images/products/SeaPuzzle.jpg';
 
 const TopCategories = () => {
   const categories = [
     {
       title: 'SHOP PUZZLES',
-      image: '/path/to/puzzles.jpg', // Replace with your image path
+      image: img1,
       bgColor: 'bg-blue-200',
     },
     {
       title: 'SHOP GAMES',
-      image: '/path/to/games.jpg', // Replace with your image path
+      image: img1,
       bgColor: 'bg-green-200',
     },
     {
       title: 'SHOP FLASH CARDS',
-      image: '/path/to/flashcards.jpg', // Replace with your image path
+      image: img1,
       bgColor: 'bg-yellow-200',
     },
     {
       title: 'SHOP LEARNING TOYS',
-      image: '/path/to/learning_toys.jpg', // Replace with your image path
+      image: img1,
       bgColor: 'bg-red-200',
     },
   ];
