@@ -1,24 +1,25 @@
 import React, { useState, useEffect } from 'react';
 import { FaStar } from 'react-icons/fa';
+import img1 from '../images/products/smallTrain.jpg';
 
 const ReviewsSlider = () => {
   const reviews = [
     {
       text: 'Inspire Learning Through Play',
       rating: 5,
-      image: '/path/to/review1.jpg', // Replace with your image path
+      image: img1,
       alignment: 'left',
     },
     {
       text: '100K+ Positive Reviews',
       rating: 4,
-      image: '/path/to/review2.jpg', // Replace with your image path
+      image: img1,
       alignment: 'right',
     },
     {
       text: 'Another great review!',
       rating: 5,
-      image: '/path/to/review3.jpg', // Replace with your image path
+      image: img1,
       alignment: 'left',
     },
   ];

@@ -8,7 +8,9 @@ import AgeCategories from './components/AgeCategories';
 import Testimonials from './components/Testimonials';
 import ReviewsSlider from './components/ReviewsSlider';
 import TopCategories from './components/TopCategories';
-import ProductSlider from './components/ProductSlider';
+import ProductSlider from './components/Data/ProductSlider';
+import ToysSlider from './components/Data/ToysSlider';
+import GamesSlider from './components/Data/GamesSlider';
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
       <AgeCategories/>
       <ProductSlider/>
       <TopCategories/>
+      <ToysSlider/>
+      <GamesSlider/>
       <ReviewsSlider/>
       <Testimonials/>
       <ImageGallery/>  

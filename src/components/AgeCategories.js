@@ -15,11 +15,11 @@ const AgeCategories = () => {
       <h2 className="text-3xl font-extrabold text-center text-gray-900 mb-8 leading-tight">
         Play, Learn and Grow - Age by Age!
       </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-6">
         {categories.map((category) => (
           <div
             key={category.age}
-            className={`rounded-xl shadow-lg p-8 ${category.color} text-white text-center transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-2xl`}
+            className={`flex flex-col items-center justify-center rounded-xl shadow-lg p-8 ${category.color} text-white text-center transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-2xl`}
           >
             <div className="text-4xl font-bold mb-3">{category.age}</div>
             <div className="text-xl font-medium opacity-80">years</div>
