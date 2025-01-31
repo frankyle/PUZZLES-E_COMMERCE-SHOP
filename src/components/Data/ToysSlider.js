@@ -57,6 +57,7 @@ const ToysSlider = () => {
     console.log(`Toy with ID: ${id} added to cart`);
   };
 
+  // Updated renderRating function for stars
   const renderRating = (rating) => {
     const fullStars = Math.floor(rating);
     const halfStars = rating % 1 >= 0.5 ? 1 : 0;
@@ -65,17 +66,17 @@ const ToysSlider = () => {
     return (
       <div className="flex">
         {Array(fullStars).fill().map((_, index) => (
-          <svg key={`full-${index}`} className="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+          <svg key={`full-${index}`} className="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
             <path d="M10 15l-3.09 1.627 1.181-3.742-2.91-2.122 3.827-.041L10 5.7l1.992 4.222 3.827.041-2.91 2.122 1.181 3.742L10 15z" />
           </svg>
         ))}
         {halfStars === 1 && (
-          <svg className="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+          <svg className="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
             <path d="M10 15l-3.09 1.627 1.181-3.742-2.91-2.122 3.827-.041L10 5.7l1.992 4.222 3.827.041-2.91 2.122 1.181 3.742L10 15z" />
           </svg>
         )}
         {Array(emptyStars).fill().map((_, index) => (
-          <svg key={`empty-${index}`} className="w-4 h-4 text-gray-300" fill="currentColor" viewBox="0 0 20 20">
+          <svg key={`empty-${index}`} className="w-5 h-5 text-gray-300" fill="currentColor" viewBox="0 0 20 20">
             <path d="M10 15l-3.09 1.627 1.181-3.742-2.91-2.122 3.827-.041L10 5.7l1.992 4.222 3.827.041-2.91 2.122 1.181 3.742L10 15z" />
           </svg>
         ))}
@@ -87,7 +88,7 @@ const ToysSlider = () => {
     <div className="bg-gray-100 py-10">
       <div className="container mx-auto px-6">
         <div className="flex justify-between items-center mb-6">
-          <h2 className="text-3xl font-extrabold text-gray-800">Toys for All Ages</h2>
+          <h2 className="text-3xl font-extrabold text-gray-800">Toys for Fun and Educational</h2>
           <a href="#" className="text-blue-600 hover:underline text-lg">View All →</a>
         </div>
         <div className="bg-gray-200 p-6 rounded-lg">
@@ -120,13 +121,19 @@ const ToysSlider = () => {
                     </div>
                     <div>{toy.rating && renderRating(toy.rating)}</div>
                   </div>
-                  <div className="flex justify-center mt-4">
-                    <button
-                      onClick={() => handleAddToCart(toy.id)}
-                      className="bg-green-500 text-white py-2 px-4 rounded-full hover:bg-green-600 transition"
-                    >
-                      <FaCartPlus className="inline-block mr-2" /> Add to Cart
-                    </button>
+                  <div className="flex justify-between items-center mb-4">
+                    <div className="text-sm text-gray-600">
+                      <p>Stock: {toy.stock}</p>
+                      <p>Sold: {toy.sold}</p>
+                    </div>
+                    <div>
+                      <button
+                        onClick={() => handleAddToCart(toy.id)}
+                        className="bg-green-500 text-white py-2 px-4 rounded-full hover:bg-green-600 transition"
+                      >
+                        <FaCartPlus className="inline-block mr-2" /> Add to Cart
+                      </button>
+                    </div>
                   </div>
                 </div>
               ))

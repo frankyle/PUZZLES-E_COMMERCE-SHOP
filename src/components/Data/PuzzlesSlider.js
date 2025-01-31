@@ -27,11 +27,17 @@ const PuzzleSlider = () => {
     const scrollInterval = setInterval(() => {
       if (sliderRef.current) {
         const maxScrollLeft = sliderRef.current.scrollWidth - sliderRef.current.clientWidth;
-        sliderRef.current.scrollLeft = sliderRef.current.scrollLeft >= maxScrollLeft ? 0 : sliderRef.current.scrollLeft + 300;
+        if (sliderRef.current.scrollLeft >= maxScrollLeft) {
+          sliderRef.current.scrollLeft = 0; // Reset to the first slide
+        } else {
+          sliderRef.current.scrollLeft = sliderRef.current.scrollLeft + 300;
+        }
       }
     }, 4000);
+    
     return () => clearInterval(scrollInterval);
   }, []);
+  
 
   const handleImageClick = (imageSrc) => {
     setSelectedImage(imageSrc);
@@ -69,7 +75,7 @@ const PuzzleSlider = () => {
     <div className="bg-gray-100 py-10">
       <div className="container mx-auto px-6">
         <div className="flex justify-between items-center mb-6">
-          <h2 className="text-3xl font-extrabold text-gray-800">Puzzle Collection</h2>
+          <h2 className="text-3xl font-extrabold text-gray-800">Best Selling Puzzle Collection</h2>
           <a href="#" className="text-blue-600 hover:underline text-lg">View All →</a>
         </div>
         <div className="bg-gray-200 p-6 rounded-lg">

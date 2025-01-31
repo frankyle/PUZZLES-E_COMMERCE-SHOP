@@ -11,12 +11,14 @@ import TopCategories from './components/TopCategories';
 import PuzzlesSlider from './components/Data/PuzzlesSlider';
 import ToysSlider from './components/Data/ToysSlider';
 import GamesSlider from './components/Data/GamesSlider';
+import HeroMain from './components/Hero/HeroMain';
 
 function App() {
   return (
     <div className="bg-gray-100 min-h-screen">
       <Header />
-      <Hero id="home" />
+      <Hero />
+      <HeroMain/>
       <AgeCategories/>
       <PuzzlesSlider/>
       <TopCategories/>
